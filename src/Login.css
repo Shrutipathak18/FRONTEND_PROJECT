@@ -1,0 +1,118 @@
+/* my-project/src/Login.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive, sans-serif;
+  background-color: #f0f8ff; /* AliceBlue - a pastel background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+  overflow-y: hidden; /* Keep vertical hidden if only horizontal is needed */
+}
+
+
+
+
+.login-box {
+  background: #ffffff !important; /* Explicitly set a solid white background with !important */
+  padding: 40px;
+  border-radius: 25px; /* Re-add rounded corners */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Re-add box shadow */
+  text-align: center;
+  max-width: 800px; /* Increased to make it more expansive horizontally */
+  width: 90%; /* Keep responsive width */
+  transform: scale(1); /* Restore initial transform for pop-in animation */
+  animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards; /* Restore pop-in animation */
+  position: relative;
+  z-index: 10;
+  margin-top: 0; /* Ensure no extra margin */
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.login-box h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px #ffe066; /* Cartoonish text shadow */
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: calc(100% - 20px); /* Adjust for padding */
+  padding: 12px 10px;
+  border: 2px solid #a8dadc; /* Pastel blue border */
+  border-radius: 10px; /* Rounded inputs */
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #457b9d; /* Darker pastel blue on focus */
+  box-shadow: 0 0 8px rgba(69, 123, 157, 0.4); /* Soft glow */
+}
+
+.login-button {
+  background-color: #e63946; /* A vibrant, cartoonish red */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px; /* Super rounded button */
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px #d62839; /* Button "push" effect */
+  margin-top: 15px;
+}
+
+.login-button:hover {
+  background-color: #d62839; /* Darker red on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 7px #c7202f;
+}
+
+.login-button:active {
+  transform: translateY(3px); /* Push down effect */
+  box-shadow: 0 2px #a81c2b;
+}
+
+.signup-link {
+  margin-top: 20px;
+  color: #777;
+}
+
+.signup-link a {
+  color: #457b9d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #1d3557; /* Darker blue on hover */
+} 

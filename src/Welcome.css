@@ -1,0 +1,109 @@
+/* my-project/src/Welcome.css */
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #cbe4f1 0%, #a8dadc 100%); /* Softer pastel gradient */
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-container::before, .welcome-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: blob-float 20s infinite ease-in-out;
+}
+
+.welcome-container::before {
+  width: 250px;
+  height: 250px;
+  top: 5%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.welcome-container::after {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 10s;
+}
+
+@keyframes blob-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+.welcome-box {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 30px; /* Even more rounded */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 700px; /* Increased max-width for a more expansive feel */
+  width: 90%;
+  transform: scale(1); /* Initial state for animation */
+  animation: slide-up 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.welcome-box h2 {
+  color: #1d3557; /* Darker blue for headings */
+  margin-bottom: 20px;
+  font-size: 3em;
+  text-shadow: 3px 3px #ffe066; /* Stronger cartoon text shadow */
+}
+
+.welcome-box p {
+  color: #457b9d;
+  font-size: 1.3em;
+  margin-bottom: 40px;
+}
+
+.start-button {
+  background-color: #f4a261; /* A friendly orange/peach color */
+  color: white;
+  padding: 18px 35px;
+  border: none;
+  border-radius: 20px; /* Very rounded button */
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 7px #e76f51; /* Button "push" effect */
+}
+
+.start-button:hover {
+  background-color: #e76f51; /* Darker orange on hover */
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 10px #d64d30;
+}
+
+.start-button:active {
+  transform: translateY(4px); /* Push down effect */
+  box-shadow: 0 3px #c04028;
+} 
